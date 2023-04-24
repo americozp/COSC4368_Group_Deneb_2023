@@ -4,10 +4,10 @@ class Agent:
 
   def __init__(self):
     self.action = None
-    self.state = [0, 0, 0] # [row, column, block]
+    self.state = [0, 0, 0 ,0] # [row,col,height,block] = [x,y,z,block]
     self.past_state = None
     self.final_state = 0
-    self.position = [0, 0]
+    self.position = [0, 0, 0] # [x,y,z]
     self.policy = None
     self.bank_account = 0
     self.reward = 0
@@ -15,9 +15,9 @@ class Agent:
 
   def initialize(self):
     self.action = None
-    self.state = [0, 0, 0]
+    self.state = [0, 0, 0, 0]
     self.past_state = None
-    self.position = [0, 0]
+    self.position = [0, 0, 0]
     self.bank_account = 0
     self.reward = 0
     self.num_actions = 0
@@ -30,6 +30,7 @@ class Agent:
   def updatePosition(self):
     self.position[0] = self.state[0]
     self.position[1] = self.state[1]
+    self.position[2] = self.state[2]
 
   def updateState(self, new_state):
     self.past_state = self.state
@@ -40,10 +41,10 @@ class Agent:
     self.bank_account += reward
 
   def canPickup(self):
-    return self.state[2] == 0
+    return self.state[3] == 0
 
   def blocked(self):
-    return self.state[2] == 1
+    return self.state[3] == 1
 
   def getFinalStates(self):
     return self.final_state
