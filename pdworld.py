@@ -26,7 +26,6 @@ class PDWorld(Frame):
     file1.write(' '.join(map(str, bank_account)))
     file1.write('\n')
     file1.write(' '.join(map(str, num_operator)))
-    file1.write("\n|----------------Running Experiment 1 Run 1 ----------------|\n")
     file1.write("\n|------------------------------ Pick up Q table Final -------------------------------|\n")
     file1.write(' '.join(map(str, pickup_q_table)))
     file1.write("\n|------------------------------ Drop off Q table Final -------------------------------|\n")
@@ -39,8 +38,8 @@ class PDWorld(Frame):
     learning_rate = 0.3
     discount_rate = 0.5
 
-    pickup_states = [[1, 3, 0], [2, 1, 0], [2, 2, 0]]
-    dropoff_states = [[1, 4, 1], [4, 0, 1], [4, 2, 0]]
+    pickup_states = [[1, 1, 2], [1, 1, 3], [3, 1, 1], [3, 2, 3]]
+    dropoff_states = [[2, 2, 1], [3, 3, 2]]
 
     agent.reset()
 
@@ -63,8 +62,8 @@ class PDWorld(Frame):
     learning_rate = 0.3
     discount_rate = 0.5
 
-    pickup_states = [[0, 0, 1], [1, 1, 1], [2, 2, 1]]
-    dropoff_states = [[1, 4, 1], [4, 0, 1], [4, 2, 1]]
+    pickup_states = [[1, 1, 2], [1, 1, 3], [3, 1, 1], [3, 2, 3]]
+    dropoff_states = [[2, 2, 1], [3, 3, 2]]
 
     agent.reset()
 
@@ -93,8 +92,8 @@ class PDWorld(Frame):
     learning_rate = 0.3
     discount_rate = 0.5
 
-    pickup_states = [[0, 0, 1], [1, 1, 1], [2, 2, 1]]
-    dropoff_states = [[1, 4, 1], [4, 0, 1], [4, 2, 1]]
+    pickup_states = [[1, 1, 2], [1, 1, 3], [3, 1, 1], [3, 2, 3]]
+    dropoff_states = [[2, 2, 1], [3, 3, 2]]
 
     agent.reset()
 
@@ -124,8 +123,8 @@ class PDWorld(Frame):
     learning_rate = 0.3
     discount_rate = 0.5
 
-    pickup_states = [[0, 0, 1], [1, 1, 1], [2, 2, 1]]
-    dropoff_states = [[1, 4, 1], [4, 0, 1], [4, 2, 1]]
+    pickup_states = [[1, 1, 2], [1, 1, 3], [3, 1, 1], [3, 2, 3]]
+    dropoff_states = [[2, 2, 1], [3, 3, 2]]
 
     agent.reset()
 
@@ -156,8 +155,8 @@ class PDWorld(Frame):
     learning_rate = 0.1
     discount_rate = 0.5
 
-    pickup_states = [[0, 0, 1], [1, 1, 1], [2, 2, 1]]
-    dropoff_states = [[1, 4, 1], [4, 0, 1], [4, 2, 1]]
+    pickup_states = [[1, 1, 2], [1, 1, 3], [3, 1, 1], [3, 2, 3]]
+    dropoff_states = [[2, 2, 1], [3, 3, 2]]
 
     agent.reset()
 
@@ -187,8 +186,8 @@ class PDWorld(Frame):
     learning_rate = 0.3
     discount_rate = 0.5
 
-    pickup_states = [[0, 0, 1], [1, 1, 1], [2, 2, 1]]
-    dropoff_states = [[1, 4, 1], [4, 0, 1], [4, 2, 1]]
+    pickup_states = [[1, 1, 2], [1, 1, 3], [3, 1, 1], [3, 2, 3]]
+    dropoff_states = [[2, 2, 1], [3, 3, 2]]
 
     agent.reset()
 
